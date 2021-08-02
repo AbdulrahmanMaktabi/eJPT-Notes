@@ -1,0 +1,40 @@
+tools:
+
+-1- nc: we are use netcat tool with HTTP hosts working on port 80
+example.com:80
+-> nc example.com 80
+-> HEAD / HTTP/1.0
+
+-2- openssl: we use this tool with HTTPS hosts working on port 443
+exmple.com:443
+-> openssl s_client -connect example.com:443
+
+-3- httprint: : we use this tool with HTTPS hosts working on port 443
+exmple.com:443
+-> httprint -h example.com -s signture.txt
+
+[+] HTTP VERB [+]
+
+-> HEAD : same to GET
+-> POST : html form - POST /login.php HTTP/1.0
+-> GET : url - GET /exmaple.com HTTP/1.0
+-> PUT : to put some thing  to web server - PUT /revers_shell.php HTTP/1.0 , content-length : X , content-type: text/html
+-> DELETE : to delete some thin from web serever
+
+
+[+] netcat [+]
+
+[-] normal connaction [-]
+server: nc -vlp 8888
+client: nc -v 127.0.0.1 8888
+
+[-] to send something [-]
+server: nc -vlp 8888
+client: echo "Hello, Wordl!" | nc -v 127.0.0.1 8888
+or
+client: cat test.txt |   nc -v 127.0.0.1 8888
+
+[-] to open shell [-]
+sever: nc -vlp 8888 -e /bin/bash
+client: nc -v 127.0.0.1 8888
+

@@ -1,0 +1,8 @@
+[+] DNS [+]
+
+-1- nslookup
+-2- host ->
+	[ -t -> type ,example: host -t (ns / mx) example.com ]
+	[ -l -> all hosts on domain , example: host -l example.com DNSexample.com ]
+	 
+

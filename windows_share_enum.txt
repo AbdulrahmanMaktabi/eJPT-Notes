@@ -1,0 +1,74 @@
+NetBIOS : network basic input outpun system
+smb : serber massage block
+
+we are use netbios to share files or dirctory .
+
+[+] first tool to enumerating windows share is -> nbtstat on Windows - nbtscan on linux
+
++++ enum +++
+
+[-] nbtstat [-] #Windows
+command: ntbstat -A 192.168.1.1
+         NET VIEW 192.168.1.1
+
+[-] nbtscan [-] #Linux
+command : nbtscan -v 192.168.1.1
+
+[-] nmblookup [-] #Linux
+command: nmblookup -A 192.168.1.1
+
+[-] smbclient [-] #Linux
+command: smbclient -L //ip_addr -N
+-L -> to list shares files
+-N -> to login with out password
+-U -> to enter  user name
+-I -> to connect
+
+[-] smbmap [-] #Linux
+command: smbmap -H target_addr -u user_name
+-H -> to set Host
+-u -> to set user
+-p -> to set password
+
++++      +++
+
+
+*** NULL SESSION ***
+
+[+] to check for NULL Session [+]
+command: NET USE //target_addr/location$ ('' #Null passwword ) (/u:'' #Null username )
+
+to automate the opption you can use tools like: [smbclient - winfo]
+
+[-] rpcclient [-] #Linux
+to check if we have null session or not we can try to connect to port 135 which is rpc
+if the port is open lets to try null session , login with out username or password
+
+command: rpcclient -U "" target_addr
+
+[-] smbclient [-] #Windows
+command: smbclient //target_addr/location$ -N
+
+[-] winfo [-] #Windows
+command: winfo //target_addr/location$ -n
+
+[-] enum4linux [-] #Linux
+-> 
+enum4linux -s WORDLIST target_addr 
+enum4linux (-S share list) (-P password policy) (-U user list) target_addr
+enum4linux (-a all) target_addr 
+
+***              ***
+
+[-] enum [-] #Windows
+command: enum (-U list users) (-P password policy) (-S share list) target_addr
+
+[-] samrdump.py [-]
+location: /usr/share/doc/python3-impacket/examples
+command: sudo python3 samrdump.py targget_addr
+
+[-] nmap scripts [-]
+command: nmap --script=smb-enum-shares target-addr
+	 nmap --script=smb-enum-users target-addr
+	 nmap --script=smb-brute target-addr
+

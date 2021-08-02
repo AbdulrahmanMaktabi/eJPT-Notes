@@ -1,0 +1,5 @@
+site: exampel.com
+filetype: exampel
+-site: exampel.com
+inurl: example.php
+intitle: exampel(wordpres 2.4)

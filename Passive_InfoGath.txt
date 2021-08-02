@@ -1,0 +1,13 @@
+Crunch Base -> is an IT startup database
+virustotal -> search about subdomain , dns 
+crt.sh
+sublist3r -> tool on github
+google hacking db - google
+bing
+shadon 
+curl
+netcraft
+built with 
+theHarvester -> tool on github
+recon-ng -> automate tool
+
