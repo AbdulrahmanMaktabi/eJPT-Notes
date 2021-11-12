@@ -1,0 +1,16 @@
+DNS = domain name system
+DNS Records ->
+	- A = subdomain IPv4 ->  www.example.com
+	- AAAA = subdomain IPv6 -> www.exammple.com
+	- MX = mail server -> { mxtoolbox.com }
+	- NS = name sever
+	- PTR = Reversed DNS -> 8.8.8.8 = google.com
+	- CNAME = Allies -> www.github.com = af.gd.te.df.fag.fp.github.com
+DNS Tools ->
+	- dig
+	-nslookup
+	-sublist3r
+- DNS Poisoning -> {dnschef , ettercap = first chanage the file /etc/etter.dns}
+- SubDomain Takeover -> {Github: 'HostileSubBruteforceru'}
+- DNS Cache Snooping -> {dig + nslookup -> -norecursive}
+
