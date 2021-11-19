@@ -8,15 +8,24 @@
 
 Recon ->
 
-	-1- https://bgp.he.net/ -> تجميع ايبيات للعنوان 
-	-2- https://github.com/ -> for tools
-	-3- subfinder on 'github.com' -> for subdomain enum
-	-4- https://securitytrails.com/ -> subdomain enum best tool 
-	-5- https://github.com/projectdiscovery/httpx -> to check if the domain work or not
-	-6- https://github.com/ffuf/ffuf -> fast web fuzzer
-	-7- https://github.com/maurosoria/dirsearch
-	-8- http://web.archive.org/cdx/search/cdx?url=*.test.com%2F*&output=text&fl=original&collapse=urlkey&filter=statuscode%3A200 
-	    -> to show domains of files and dir about the site
-	-9- https://www.ultimatedomains.com/extract-domains.php -> to extract only domains
-	-10- sublist3r -> tool on github
-	-11- subzy -> tool on github to scan subdomain take over
+-1- https://bgp.he.net/ -> تجميع ايبيات للعنوان 
+-2- https://github.com/ -> for tools
+-3- subfinder on 'github.com' -> for subdomain enum
+-4- https://securitytrails.com/ -> subdomain enum best tool 
+-5- https://github.com/projectdiscovery/httpx -> to check if the domain work or not
+-6- https://github.com/ffuf/ffuf -> fast web fuzzer
+-7- https://github.com/maurosoria/dirsearch
+-8- http://web.archive.org/cdx/search/cdx?url=*.test.com%2F*&output=text&fl=original&collapse=urlkey&filter=statuscode%3A200 
+    -> to show domains of files and dir about the site
+
+SHODAN DORKING
+-1- ssl:"example.com" "200" -> status code
+-2- Search Shodan via Favicon Hash ->
+	-1- find favicon reading source code and search about "favicon"
+	-2- calculate the hash of the favicon for example you can use -> https://faviconhash.com
+	-3- search on shodan -> http.favicon.hash "F43f53F34G" "200"
+-3- search shodan vi ASN number using this websit (https://bgp.he.net/)->
+	-1- asn:"ASN_NUMBER" "200"
+-4- search shoda vi CIDR ->
+	-1- net:"10.0.2.0/24" "200"
+to read more about shodan dork you can visit this page on github : https://github.com/humblelad/Shodan-Dorks
