@@ -1,0 +1,20 @@
+- ffuf
+- httpx -> cat domains | httpx , cat domains | httpx -title , cat domains | httpx -port 80,443,22,21 , cat domains | https -status-code
+	   cat domains | httpx -status-code -mc 200 , cat domains | httpx -o file.txt
+- hetznr
+- naabu
+- securitytrails
+- https://github.com/danielmiessler/SecLists
+
+Recon ->
+
+	-1- https://bgp.he.net/ -> تجميع ايبيات للعنوان 
+	-2- https://github.com/ -> for tools
+	-3- subfinder on 'github.com' -> for subdomain enum
+	-4- https://securitytrails.com/ -> subdomain enum best tool 
+	-5- https://github.com/projectdiscovery/httpx -> to check if the domain work or not
+	-6- https://github.com/ffuf/ffuf -> fast web fuzzer
+	-7- https://github.com/maurosoria/dirsearch
+	-8- http://web.archive.org/cdx/search/cdx?url=*.test.com%2F*&output=text&fl=original&collapse=urlkey&filter=statuscode%3A200 
+	    -> to show domains of files and dir about the site
+	-9- https://www.ultimatedomains.com/extract-domains.php -> to extract only domains
