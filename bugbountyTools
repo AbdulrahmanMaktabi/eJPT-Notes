@@ -18,3 +18,5 @@ Recon ->
 	-8- http://web.archive.org/cdx/search/cdx?url=*.test.com%2F*&output=text&fl=original&collapse=urlkey&filter=statuscode%3A200 
 	    -> to show domains of files and dir about the site
 	-9- https://www.ultimatedomains.com/extract-domains.php -> to extract only domains
+	-10- sublist3r -> tool on github
+	-11- subzy -> tool on github to scan subdomain take over
