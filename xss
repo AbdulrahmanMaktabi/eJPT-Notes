@@ -1,0 +1,9 @@
+xss types ->
+  strod
+  DOM
+  reflected
+js functions ->
+  confirtm()
+  prompt()
+  alert()
+xss payloads -> html5sec.org
